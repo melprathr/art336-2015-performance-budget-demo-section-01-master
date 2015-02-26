@@ -27,3 +27,15 @@
     font-style: normal;
 
 }
+
+@mixin body-font-light {
+    font-family: 'titilliumlight', 'helvetica', 'verdana', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin headline-font {
+    font-family: 'titilliumblack', 'helvetica', 'verdana', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
