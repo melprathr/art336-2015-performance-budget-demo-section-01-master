@@ -1,1 +1,8 @@
 /* Module.scss */
+
+nav [role="navigation"] ul {
+    background-color: $color;
+    list-style-type: none;
+    margin: 0 20px 0 0;
+    padding: 0 8px 4px 8px;
+}
