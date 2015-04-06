@@ -357,9 +357,198 @@ th {
   padding: 0; }
 
 /* Globals.scss */
+@font-face {
+  font-family: 'titilliumblack';
+  src: url("../webfonts/Titillium/Titillium-Black-webfont.eot");
+  src: url("../webfonts/Titillium/Titillium-Black-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/Titillium/Titillium-Black-webfont.woff2") format("woff2"), url("../webfonts/Titillium/Titillium-Black-webfont.woff") format("woff"), url("../webfonts/Titillium/Titillium-Black-webfont.ttf") format("truetype"), url("../webfonts/Titillium/Titillium-Black-webfont.svg#titilliumblack") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'titilliumlight';
+  src: url("../webfonts/Titillium/Titillium-Light-webfont.eot");
+  src: url("../webfonts/Titillium/Titillium-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/Titillium/Titillium-Light-webfont.woff2") format("woff2"), url("../webfonts/Titillium/Titillium-Light-webfont.woff") format("woff"), url("../webfonts/Titillium/Titillium-Light-webfont.ttf") format("truetype"), url("../webfonts/Titillium/Titillium-Light-webfont.svg#titilliumlight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 /* Base.scss */
+body {
+  background-color: #d9d6d6;
+  color: #262626;
+  font-family: 'titilliumlight', 'helvetica', 'verdana', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 22px; }
+
+img {
+  max-width: 100%; }
+
+h1, h2, h3 {
+  font-family: 'titilliumblack', 'helvetica', 'verdana', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  overflow: hidden; }
+
+a {
+  transition: color 300ms linear; }
+  a:hover {
+    transition: color 300ms linear; }
+
 /* Layout.scss */
+nav[role="navigation"] {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%; }
+
+header[role="banner"] {
+  margin: 100px 0 140px 0; }
+
+header[role="banner"], main[role="main"] {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%; }
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%; }
+
+  header[role="banner"], main[role="main"] {
+    max-width: 1024px; }
+
+  nav[role="navigation"] {
+    position: static;
+    width: 100%; }
+
+  header[role="banner"] {
+    box-sizing: border-box;
+    float: left;
+    padding-right: 40px;
+    width: 20%; }
+
+  main[role="main"] {
+    float: right;
+    width: 60%; }
+
+  footer[role="contentinfo"] {
+    float: left; } }
+.cafe, .food {
+  margin-bottom: 4.54545em; }
+
 /* Module.scss */
+nav[role="navigation"] ul {
+  background-color: #262626;
+  list-style-type: none;
+  margin: 0 20px 0 0;
+  padding: 0 8px 4px 8px; }
+  @media screen and (min-width: 1024px) {
+    nav[role="navigation"] ul {
+      max-wdith: 100%;
+      margin-bottom: 60px; } }
+
+nav[role="navigation"] ul li {
+  display: inline-block;
+  margin: 0 0 0 8px;
+  padding: 0; }
+
+nav[role="navigation"] a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 300ms linear; }
+  nav[role="navigation"] a:hover {
+    color: #b3b3b3;
+    transition: color 300ms linear; }
+
+main[role="main"] {
+  box-sizing: border-box;
+  padding: 0 10px; }
+
+header[role="banner"] svg {
+  fill: #262626; }
+  @media screen and (min-width: 1024px) {
+    header[role="banner"] svg {
+      margin: 0; } }
+
+.place-mark {
+  fill: #6e6e6e; }
+
+.cafe h1 svg, .food h1 svg, .attractions h1 svg {
+  height: 0.72727em;
+  fill: #262626;
+  margin-right: 0.27273em; }
+
+.cafe h1, .food h1, .attractions h1,
+.cafe h2, .food h2, .attractions h2 {
+  font-size: 2.27273em; }
+
+.cafe h1 a, .food h1 a, .attractions h1 a,
+.cafe h2 a, .food h2 a, .attractions h2 a {
+  color: #6e6e6e;
+  transition: color 300ms linear; }
+  .cafe h1 a:hover, .food h1 a:hover, .attractions h1 a:hover,
+  .cafe h2 a:hover, .food h2 a:hover, .attractions h2 a:hover {
+    color: #5a5a5a;
+    transition: color 300ms linear; }
+
+.cafe-location, .food-location, .attraction-location {
+  margin-bottom: 4.54545em; }
+  .cafe-location:last-of-type, .food-location:last-of-type, .attraction-location:last-of-type {
+    margin-bottom: 0; }
+
+.street-address:before {
+  content: "a. ";
+  font-family: 'titilliumblack', 'helvetica', 'verdana', sans-serif;
+  font-weight: normal;
+  font-style: normal; }
+
+abbr[title] {
+  border-bottom: none; }
+
+.tel {
+  display: block; }
+  .tel:before {
+    content: "p. ";
+    font-family: 'titilliumblack', 'helvetica', 'verdana', sans-serif;
+    font-weight: normal;
+    font-style: normal; }
+
+footer[role="contentinfo"] {
+  background-color: #262626;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px; }
+
+footer[role="contentinfo"] h2 {
+  margin: 0; }
+
+footer[role="contentinfo"] ul + h2 {
+  margin-top: 1em; }
+
+footer[role="contentinfo"] ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+footer[role="contentinfo"] ul li {
+  display: inline-block;
+  margin: 0 4px 0 0;
+  padding: 0; }
+
+footer[role="contentinfo"] a {
+  color: #fff;
+  transition: color 300ms linear; }
+  footer[role="contentinfo"] a:hover {
+    color: #b3b3b3;
+    transition: color 300ms linear; }
+
+.loading-icon {
+  max-width: 200px;
+  width: 100%; }
+
+p[data-lazy-load] {
+  text-align: center; }
+
 /* State.scss */
 /* Theme.scss */
 

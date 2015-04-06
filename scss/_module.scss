@@ -1,8 +1,137 @@
 /* Module.scss */
 
-nav [role="navigation"] ul {
+nav[role="navigation"] ul {
     background-color: $color;
     list-style-type: none;
     margin: 0 20px 0 0;
     padding: 0 8px 4px 8px;
+    @media screen and (min-width: 1024px) {
+        max-wdith: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+nav[role="navigation"] ul li {
+    display: inline-block;
+    margin: 0 0 0 8px;
+    padding: 0;
+}
+
+nav[role="navigation"] a {
+    color: #fff;
+    font-size: 18px;
+    transition: color 300ms linear;
+    &:hover {
+        color: darken(#fff, 30%);
+        transition: color 300ms linear;
+    }
+}
+
+main[role="main"] {
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+header[role="banner"] svg {
+    fill: $color;
+    @media screen and (min-width: 1024px) {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+}
+
+.place-mark {
+    fill: $logo-color;
+}
+
+.cafe h1 svg, .food h1 svg {
+    vertical-align: sub;
+    height: em(40px);
+    fill: $color;
+}
+
+.cafe h1, .food h1 {
+    font-size: em(50px);
+}
+
+.cafe h1 a, .food h1 a {
+    color: $logo-color;
+    transition: color 300ms linear;
+    &:hover {
+        color: darken($logo-color,8%);
+        transition: color 300ms linear;
+    }
+}
+
+.cafe-location, .food-location {
+    margin-bottom: em(100px); 
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.street-address:before {
+        content: "a. ";
+        @include headline-font;
+        color: $logo-color;
+}
+
+abbr[title] {
+    border-bottom: none;
+}
+
+.tel {
+    display: block;
+    &:before {
+        content: "p. ";
+        @include headline-font;
+        color: $logo-color;
+    }
+}
+
+footer[role="contentinfo"] {
+    background-color:$color;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+}
+
+
+footer[role="contentinfo"] ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer[role="contentinfo"] ul li {
+    display: inline-block;
+    margin: 0 4px 0 0;
+    padding: 0;
+}
+
+footer[role="contentinfo"] a {
+    color: #fff;
+    transition: color 300ms linear;
+    &:hover {
+        color: darken(#fff,30%);
+        transition: color 300ms linear;
+    }
+}
+
+.vcard {
+    text-align: center;
+}
+
+.loading-icon {
+    max-width: 200px;
+    width: 100%;
+}
+
+.image {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+p[data-lazy-load] {
+  text-align: center;
 }
